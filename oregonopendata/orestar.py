@@ -28,7 +28,7 @@ class OrestarDataLoader:
         except:
             print("Error Deleting Existing Data (does it exist?)")
 
-        df.to_sql(self.table, DatabaseManager().create_engine(), if_exists='replace')
+        df.to_sql(self.table, DatabaseManager().create_engine(), if_exists='append')
 
 if __name__ == "__main__":
     ap = ArgumentParser()
@@ -45,6 +45,4 @@ if __name__ == "__main__":
 
     if args.cmd == 'load-file':
         loader.load_file(args.filename)
-
-    print(loader.read_file('data/KitJohnston.xls').head())
 

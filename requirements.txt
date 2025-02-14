@@ -1,4 +1,9 @@
+bs4
+html5lib
 pandas
+pypdf
 pymysql
+Pytesseract
+requests
 sqlalchemy
 xlrd
